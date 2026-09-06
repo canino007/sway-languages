@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /legal.html
+Disallow: /privacy.html
+Disallow: /cookies.html
+Disallow: /terms.html
+
+Sitemap: https://www.swaylanguages.com/sitemap.xml
