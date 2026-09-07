@@ -11,15 +11,16 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="nav is-scrolled">
+<header class="nav is-scrolled theme-light">
   <a href="index.html" class="nav__logo">SWAY <span>Languages</span></a>
   <nav class="nav__links" aria-label="Primary">
-    <a class="nav__link" href="index.html#lessons">Lessons</a>
-    <a class="nav__link" href="index.html#pricing">Pricing</a>
-    <a class="nav__link" href="index.html#faq">FAQ</a>
+    <a class="nav__link" href="resources.html">Resources</a>
+    <a class="nav__link" href="index.html#levels">Levels</a>
+    <a class="nav__link" href="index.html#exams">Exams</a>
+    <a class="nav__link" href="index.html#about">About</a>
   </nav>
   <div class="nav__cta">
-    <a href="index.html#book" class="btn btn-primary magnetic" data-book-trigger>Book a trial</a>
+    <a href="resources.html" class="btn btn-primary magnetic"><span>Explore Resources</span> <span class="btn-arrow">→</span></a>
     <button class="nav__menu-btn" data-menu-open aria-label="Open menu" aria-expanded="false">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
     </button>
@@ -33,9 +34,10 @@
     </button>
   </div>
   <nav class="mobile-menu__links" aria-label="Mobile">
-    <a href="index.html#lessons">Lessons</a>
-    <a href="index.html#pricing">Pricing</a>
-    <a href="index.html#faq">FAQ</a>
+    <a href="resources.html"><span>01</span>Resources</a>
+    <a href="index.html#levels"><span>02</span>Levels</a>
+    <a href="index.html#exams"><span>03</span>Exams</a>
+    <a href="index.html#about"><span>04</span>About</a>
   </nav>
 </div>
 
@@ -48,24 +50,22 @@
 
       <div class="body-copy">
         <h2>Who we are</h2>
-        <p>Sway Languages ("we", "us") provides Spanish lessons. The data controller is <span class="config-flag">[LEGAL_NAME]</span>, contactable at <span class="config-flag">[DATA_PROTECTION_CONTACT]</span>.</p>
+        <p>Sway Languages ("we", "us") provides a free English-learning resource library. The data controller is <span class="config-flag">[LEGAL_NAME]</span>, contactable at <span class="config-flag">[DATA_PROTECTION_CONTACT]</span>.</p>
 
         <h2>What we collect</h2>
         <ul>
-          <li>Information you give us directly — for example your name and email address when you book a trial lesson.</li>
-          <li>Booking information handled by our booking provider, <span class="config-flag">[BOOKING_PROVIDER]</span>.</li>
+          <li>Information you give us directly — for example your name and email address if you contact us.</li>
           <li>Basic analytics data, only if you accept analytics cookies — see the <a href="cookies.html">Cookie Policy</a>.</li>
         </ul>
 
         <h2>Why we collect it</h2>
         <ul>
-          <li>To schedule and deliver your trial lesson and any lessons afterwards.</li>
           <li>To respond to enquiries sent by email.</li>
-          <li>To understand, in aggregate, how the website is used (only with consent).</li>
+          <li>To understand, in aggregate, how the website and resource library are used (only with consent).</li>
         </ul>
 
         <h2>Who we share it with</h2>
-        <p>Booking details are shared with <span class="config-flag">[BOOKING_PROVIDER]</span> so that lessons can be scheduled. This website is hosted by <span class="config-flag">[HOSTING_PROVIDER]</span>. Analytics, if enabled, are provided by <span class="config-flag">[ANALYTICS_PROVIDER]</span>. Payment, where applicable, is processed by <span class="config-flag">[PAYMENT_PROVIDER]</span>.</p>
+        <p>This website is hosted by <span class="config-flag">[HOSTING_PROVIDER]</span>. Analytics, if enabled, are provided by <span class="config-flag">[ANALYTICS_PROVIDER]</span>.</p>
 
         <h2>How long we keep it</h2>
         <p><span class="config-flag">[RETENTION_PERIOD — to be defined]</span></p>
@@ -80,7 +80,7 @@
   </section>
 </main>
 
-<footer class="footer section--ink">
+<footer class="footer t-ink">
   <div class="wrap">
     <div class="footer__bottom" style="border-top:none; padding-top:0;">
       <span>© <span data-year>2026</span> Sway Languages. All rights reserved.</span>
@@ -123,12 +123,6 @@
   </div>
 </div>
 
-<div class="booking-modal" data-booking-modal role="dialog" aria-modal="true" aria-label="Book your free trial">
-  <div class="booking-modal__panel">
-    <div class="booking-modal__head"><span>Book your free trial</span><button class="booking-modal__close" data-booking-close aria-label="Close booking">&times;</button></div>
-    <div class="booking-modal__body" data-booking-body><div class="booking-modal__fallback"><p class="muted">Loading available times…</p></div></div>
-  </div>
-</div>
 <script src="assets/main.js"></script>
 </body>
 </html>

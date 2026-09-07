@@ -3,25 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sway Notes | Sway Languages</title>
-<meta name="description" content="Sway Notes: vocabulary, pronunciation and culture notes for English speakers learning Spanish. Coming soon.">
+<title>Resources | Sway Languages</title>
+<meta name="description" content="Browse the Sway Languages resource library by level, skill, exam board and resource type — grammar, vocabulary, reading, listening, writing, speaking and more.">
 <link rel="canonical" href="https://www.swaylanguages.com/resources.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sway Languages">
+<meta property="og:title" content="Resources | Sway Languages">
+<meta property="og:description" content="Browse the Sway Languages resource library by level, skill, exam board and resource type.">
+<meta property="og:url" content="https://www.swaylanguages.com/resources.html">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="nav is-scrolled">
+<header class="nav is-scrolled theme-light">
   <a href="index.html" class="nav__logo">SWAY <span>Languages</span></a>
   <nav class="nav__links" aria-label="Primary">
-    <a class="nav__link" href="index.html#lessons">Lessons</a>
-    <a class="nav__link" href="index.html#method">Method</a>
+    <a class="nav__link" href="resources.html">Resources</a>
+    <a class="nav__link" href="index.html#levels">Levels</a>
+    <a class="nav__link" href="index.html#exams">Exams</a>
     <a class="nav__link" href="index.html#about">About</a>
-    <a class="nav__link" href="index.html#pricing">Pricing</a>
-    <a class="nav__link" href="index.html#faq">FAQ</a>
   </nav>
   <div class="nav__cta">
-    <a href="index.html#book" class="btn btn-primary magnetic" data-book-trigger>Book a trial</a>
+    <a href="#browse" class="btn btn-primary magnetic"><span>Explore Resources</span> <span class="btn-arrow">→</span></a>
     <button class="nav__menu-btn" data-menu-open aria-label="Open menu" aria-expanded="false">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
     </button>
@@ -36,82 +40,119 @@
     </button>
   </div>
   <nav class="mobile-menu__links" aria-label="Mobile">
-    <a href="index.html#lessons">Lessons</a>
-    <a href="index.html#method">Method</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#pricing">Pricing</a>
-    <a href="index.html#faq">FAQ</a>
+    <a href="resources.html"><span>01</span>Resources</a>
+    <a href="index.html#levels"><span>02</span>Levels</a>
+    <a href="index.html#exams"><span>03</span>Exams</a>
+    <a href="index.html#about"><span>04</span>About</a>
   </nav>
-  <div class="mobile-menu__footer">
-    <a href="index.html#book" class="btn btn-primary" data-book-trigger>Book your free trial</a>
-  </div>
 </div>
 
 <main id="main" class="simple-page">
-  <section class="section section--tight">
+  <section class="section section--tight t-paper">
     <div class="wrap">
-      <span class="kicker">Sway Notes</span>
-      <h1 class="display" style="margin-top:0.6rem; font-size: var(--step-1); max-width: 20ch;">A library of notes on Spanish, built as lessons go.</h1>
-      <p class="lede" style="margin-top:1.2rem;">Sway Notes will grow into a small collection of vocabulary guides, pronunciation notes, grammar explanations, cultural notes and mini exercises — written for English speakers, in the same practical spirit as the lessons.</p>
+      <span class="kicker">The library</span>
+      <h1 class="display" style="margin-top:0.7rem; font-size: var(--step-hero); max-width: 18ch;">Sway <em class="display-italic">Notes</em> — the resource library.</h1>
+      <p class="lede" style="margin-top:1.2rem;">Every resource Sway Languages publishes will live here, organised by level, skill, exam board and resource type. The library is in its early stages — here's what's currently in development.</p>
+      <div class="legend" style="margin-top:1.6rem;">
+        <span class="legend__item"><span class="legend__dot" style="background:var(--terracotta)"></span>Grammar</span>
+        <span class="legend__item"><span class="legend__dot" style="background:var(--amber)"></span>Vocabulary</span>
+        <span class="legend__item"><span class="legend__dot" style="background:var(--teal)"></span>Reading</span>
+        <span class="legend__item"><span class="legend__dot" style="background:var(--teal-light)"></span>Listening</span>
+        <span class="legend__item"><span class="legend__dot" style="background:var(--olive-light)"></span>Writing</span>
+        <span class="legend__item"><span class="legend__dot" style="background:var(--terracotta-bright)"></span>Speaking</span>
+        <span class="legend__item"><span class="legend__dot" style="background:var(--amber-deep)"></span>Pronunciation</span>
+        <span class="legend__item"><span class="legend__dot" style="background:var(--teal-deep)"></span>Use of English</span>
+        <span class="legend__item"><span class="legend__dot" style="background:var(--lvl-c2)"></span>Exam Preparation</span>
+      </div>
     </div>
   </section>
 
-  <section class="section section--panel section--line-top">
+  <section class="section section--tight t-paper-2" id="browse" style="border-top:1px solid var(--line);">
     <div class="wrap">
-      <div class="resources__grid">
-        <div class="resource-card">
-          <div class="resource-card__tag">Vocabulary</div>
-          <h4>Everyday expressions</h4>
-          <p>Coming soon.</p>
+      <div class="search-panel">
+        <div class="search-panel__row">
+          <div class="search-field">
+            <label for="filter-level">Level</label>
+            <select id="filter-level" data-filter-level>
+              <option value="">All levels</option>
+              <option value="a1">A1</option><option value="a2">A2</option>
+              <option value="b1">B1</option><option value="b2">B2</option>
+              <option value="c1">C1</option><option value="c2">C2</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="filter-skill">Skill</label>
+            <select id="filter-skill" data-filter-skill>
+              <option value="">All skills</option>
+              <option value="grammar">Grammar</option>
+              <option value="vocabulary">Vocabulary</option>
+              <option value="reading">Reading</option>
+              <option value="listening">Listening</option>
+              <option value="writing">Writing</option>
+              <option value="speaking">Speaking</option>
+              <option value="pronunciation">Pronunciation</option>
+              <option value="use-of-english">Use of English</option>
+              <option value="exam-preparation">Exam Preparation</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="filter-exam">Exam</label>
+            <select id="filter-exam" data-filter-exam>
+              <option value="">All exams</option>
+              <option value="cambridge">Cambridge</option>
+              <option value="trinity">Trinity</option>
+              <option value="aptis">Aptis</option>
+              <option value="ebau-pau">EBAU / PAU</option>
+              <option value="ielts">IELTS</option>
+              <option value="toefl">TOEFL</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="filter-type">Resource type</label>
+            <select id="filter-type" data-filter-type>
+              <option value="">All types</option>
+              <option value="Guide">Guide</option>
+              <option value="Practice">Practice</option>
+              <option value="Word list">Word list</option>
+              <option value="Checklist">Checklist</option>
+            </select>
+          </div>
+          <button class="search-panel__submit" data-filter-reset type="button">Reset</button>
         </div>
-        <div class="resource-card">
-          <div class="resource-card__tag">Pronunciation</div>
-          <h4>Sounds English doesn't have</h4>
-          <p>Coming soon.</p>
-        </div>
-        <div class="resource-card">
-          <div class="resource-card__tag">Grammar</div>
-          <h4>Notes for English speakers</h4>
-          <p>Coming soon.</p>
-        </div>
-        <div class="resource-card">
-          <div class="resource-card__tag">Culture</div>
-          <h4>Notes on Spanish life</h4>
-          <p>Coming soon.</p>
-        </div>
-        <div class="resource-card">
-          <div class="resource-card__tag">Travel</div>
-          <h4>Phrases before you land</h4>
-          <p>Coming soon.</p>
-        </div>
-        <div class="resource-card">
-          <div class="resource-card__tag">Exercises</div>
-          <h4>Short practice sets</h4>
-          <p>Coming soon.</p>
-        </div>
+        <p class="search-panel__count" data-resource-count></p>
       </div>
-      <div style="margin-top:2.4rem;">
-        <a href="index.html#book" class="btn btn-primary magnetic" data-book-trigger>Book your free trial</a>
-      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight t-paper">
+    <div class="wrap">
+      <div class="featured-grid" data-resource-grid></div>
+    </div>
+  </section>
+
+  <section class="section section--tight t-olive">
+    <div class="wrap" style="text-align:center;">
+      <span class="kicker">Coming next</span>
+      <h2 class="display" style="margin-top:0.7rem; max-width:26ch; margin-inline:auto;">More resources, levels and exam sections are added as they're ready.</h2>
+      <p class="lede" style="margin:1.2rem auto 0;">Nothing on Sway Languages is presented as finished before it actually is.</p>
     </div>
   </section>
 </main>
 
-<footer class="footer section--ink">
+<footer class="footer t-ink">
   <div class="wrap">
+    <h2 class="display footer__mega"><span>SWAY</span><span class="display-italic">Languages</span></h2>
     <div class="footer__top">
       <div class="footer__brand">
-        <p class="display">SWAY <span style="font-style:italic; font-weight:400;">Languages</span></p>
-        <p>Personalised Spanish lessons for English speakers.</p>
+        <p>A free, structured English-learning resource library — organised by level, skill and exam board.</p>
       </div>
       <div>
-        <h5>Sway</h5>
+        <h5>Explore</h5>
         <ul>
-          <li><a href="index.html#lessons">Lessons</a></li>
-          <li><a href="index.html#method">Method</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="index.html#levels">Levels</a></li>
+          <li><a href="index.html#exams">Exams</a></li>
           <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#pricing">Pricing</a></li>
-          <li><a href="index.html#faq">FAQ</a></li>
         </ul>
       </div>
       <div>
@@ -120,7 +161,7 @@
           <li><a href="legal.html">Legal notice</a></li>
           <li><a href="privacy.html">Privacy policy</a></li>
           <li><a href="cookies.html">Cookie policy</a></li>
-          <li><a href="terms.html">Terms &amp; booking policy</a></li>
+          <li><a href="terms.html">Terms &amp; conditions</a></li>
         </ul>
       </div>
       <div>
@@ -133,11 +174,11 @@
     </div>
     <div class="footer__bottom">
       <span>© <span data-year>2026</span> Sway Languages. All rights reserved.</span>
+      <button data-cookie-preferences>Cookie preferences</button>
     </div>
   </div>
 </footer>
 
-<!-- Cookie banner -->
 <div class="cookie-banner" data-cookie-banner role="dialog" aria-label="Cookie notice">
   <p>Sway Languages uses only the cookies necessary to run this site. With your permission, we'd also like to use a small amount of analytics to understand how the site is used. You can change this at any time.</p>
   <div class="cookie-banner__actions">
@@ -146,8 +187,6 @@
     <button class="btn btn-text" data-cookie-preferences style="color:#E4DECD;">Configure</button>
   </div>
 </div>
-
-<!-- Cookie preferences modal -->
 <div class="cookie-modal" data-cookie-modal>
   <div class="cookie-modal__panel" role="dialog" aria-modal="true" aria-label="Cookie preferences">
     <h3 class="display" style="font-size:1.3rem;">Cookie preferences</h3>
@@ -167,18 +206,7 @@
   </div>
 </div>
 
-<div class="booking-modal" data-booking-modal role="dialog" aria-modal="true" aria-label="Book your free trial">
-  <div class="booking-modal__panel">
-    <div class="booking-modal__head">
-      <span>Book your free trial</span>
-      <button class="booking-modal__close" data-booking-close aria-label="Close booking">&times;</button>
-    </div>
-    <div class="booking-modal__body" data-booking-body>
-      <div class="booking-modal__fallback"><p class="muted">Loading available times…</p></div>
-    </div>
-  </div>
-</div>
-
+<script src="assets/resources-data.js"></script>
 <script src="assets/main.js"></script>
 </body>
 </html>

@@ -19,7 +19,82 @@
     initStickyCta();
     initMagnetic();
     initYear();
+    initResourceLibrary();
   });
+
+  /* ---------------- Resource library: render + filter (client-side demo) ---------------- */
+  var SKILL_LABELS = {
+    "grammar": "Grammar", "vocabulary": "Vocabulary", "reading": "Reading",
+    "listening": "Listening", "writing": "Writing", "speaking": "Speaking",
+    "pronunciation": "Pronunciation", "use-of-english": "Use of English",
+    "exam-preparation": "Exam Preparation"
+  };
+  var EXAM_LABELS = {
+    "cambridge": "Cambridge", "trinity": "Trinity", "aptis": "Aptis",
+    "ebau-pau": "EBAU / PAU", "ielts": "IELTS", "toefl": "TOEFL", "general": ""
+  };
+
+  function resourceCardHTML(r){
+    var examTag = r.exam !== "general"
+      ? '<span class="resource-tag" style="--tag-color:var(--amber-deep)">' + EXAM_LABELS[r.exam] + '</span>'
+      : "";
+    return (
+      '<article class="resource-card">' +
+        '<div class="resource-card__meta">' +
+          '<span class="resource-tag resource-tag--level" style="--tag-color:var(--lvl-' + r.level + ')">' + r.level.toUpperCase() + '</span>' +
+          '<span class="resource-tag" style="--tag-color:var(--teal)">' + SKILL_LABELS[r.skill] + '</span>' +
+          examTag +
+          '<span class="resource-tag resource-tag--soon">Coming soon</span>' +
+        '</div>' +
+        '<h4>' + r.title + '</h4>' +
+        '<p>' + r.blurb + '</p>' +
+        '<span class="resource-card__cta">' + r.type + ' · in development</span>' +
+      '</article>'
+    );
+  }
+
+  function initResourceLibrary(){
+    var grid = document.querySelector("[data-resource-grid]");
+    var data = window.SWAY_RESOURCES;
+    if (!grid || !data) return;
+
+    var limit = parseInt(grid.getAttribute("data-limit") || "0", 10);
+    var countEl = document.querySelector("[data-resource-count]");
+    var levelSel = document.querySelector("[data-filter-level]");
+    var skillSel = document.querySelector("[data-filter-skill]");
+    var examSel = document.querySelector("[data-filter-exam]");
+    var typeSel = document.querySelector("[data-filter-type]");
+    var resetBtn = document.querySelector("[data-filter-reset]");
+
+    function render(){
+      var filtered = data.filter(function(r){
+        if (levelSel && levelSel.value && r.level !== levelSel.value) return false;
+        if (skillSel && skillSel.value && r.skill !== skillSel.value) return false;
+        if (examSel && examSel.value && r.exam !== examSel.value) return false;
+        if (typeSel && typeSel.value && r.type !== typeSel.value) return false;
+        return true;
+      });
+      var toShow = limit ? filtered.slice(0, limit) : filtered;
+      grid.innerHTML = toShow.length
+        ? toShow.map(resourceCardHTML).join("")
+        : '<p class="muted">No resources match those filters yet — try a broader search.</p>';
+      if (countEl){
+        countEl.innerHTML = "Showing <strong>" + toShow.length + "</strong> of <strong>" + filtered.length + "</strong> planned resources";
+      }
+    }
+
+    [levelSel, skillSel, examSel, typeSel].forEach(function(sel){
+      if (sel) sel.addEventListener("change", render);
+    });
+    if (resetBtn){
+      resetBtn.addEventListener("click", function(){
+        [levelSel, skillSel, examSel, typeSel].forEach(function(sel){ if (sel) sel.value = ""; });
+        render();
+      });
+    }
+
+    render();
+  }
 
   /* ---------------- Nav scroll state ---------------- */
   function initNav(){

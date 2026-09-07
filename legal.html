@@ -11,15 +11,16 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="nav is-scrolled">
+<header class="nav is-scrolled theme-light">
   <a href="index.html" class="nav__logo">SWAY <span>Languages</span></a>
   <nav class="nav__links" aria-label="Primary">
-    <a class="nav__link" href="index.html#lessons">Lessons</a>
-    <a class="nav__link" href="index.html#pricing">Pricing</a>
-    <a class="nav__link" href="index.html#faq">FAQ</a>
+    <a class="nav__link" href="resources.html">Resources</a>
+    <a class="nav__link" href="index.html#levels">Levels</a>
+    <a class="nav__link" href="index.html#exams">Exams</a>
+    <a class="nav__link" href="index.html#about">About</a>
   </nav>
   <div class="nav__cta">
-    <a href="index.html#book" class="btn btn-primary magnetic" data-book-trigger>Book a trial</a>
+    <a href="resources.html" class="btn btn-primary magnetic"><span>Explore Resources</span> <span class="btn-arrow">→</span></a>
     <button class="nav__menu-btn" data-menu-open aria-label="Open menu" aria-expanded="false">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
     </button>
@@ -33,9 +34,10 @@
     </button>
   </div>
   <nav class="mobile-menu__links" aria-label="Mobile">
-    <a href="index.html#lessons">Lessons</a>
-    <a href="index.html#pricing">Pricing</a>
-    <a href="index.html#faq">FAQ</a>
+    <a href="resources.html"><span>01</span>Resources</a>
+    <a href="index.html#levels"><span>02</span>Levels</a>
+    <a href="index.html#exams"><span>03</span>Exams</a>
+    <a href="index.html#about"><span>04</span>About</a>
   </nav>
 </div>
 
@@ -57,7 +59,7 @@
         </ul>
 
         <h2>Purpose of this website</h2>
-        <p>This website provides information about Spanish lessons offered by Sway Languages and allows visitors to book a free trial lesson via a third-party booking provider.</p>
+        <p>This website provides a free, structured library of English-learning resources, organised by CEFR level, skill and exam board.</p>
 
         <h2>Hosting</h2>
         <p>This website is hosted by <span class="config-flag">[HOSTING_PROVIDER]</span>.</p>
@@ -66,13 +68,13 @@
         <p>The content, design and branding of this website belong to Sway Languages unless otherwise stated. Please don't reproduce it without permission.</p>
 
         <h2>Third-party services</h2>
-        <p>Bookings are handled by <span class="config-flag">[BOOKING_PROVIDER]</span>. See the <a href="privacy.html">Privacy Policy</a> for details on how your information is handled.</p>
+        <p>Where any third-party service is used (for example, analytics), see the <a href="privacy.html">Privacy Policy</a> for details on how your information is handled.</p>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="footer section--ink">
+<footer class="footer t-ink">
   <div class="wrap">
     <div class="footer__bottom" style="border-top:none; padding-top:0;">
       <span>© <span data-year>2026</span> Sway Languages. All rights reserved.</span>
@@ -115,12 +117,6 @@
   </div>
 </div>
 
-<div class="booking-modal" data-booking-modal role="dialog" aria-modal="true" aria-label="Book your free trial">
-  <div class="booking-modal__panel">
-    <div class="booking-modal__head"><span>Book your free trial</span><button class="booking-modal__close" data-booking-close aria-label="Close booking">&times;</button></div>
-    <div class="booking-modal__body" data-booking-body><div class="booking-modal__fallback"><p class="muted">Loading available times…</p></div></div>
-  </div>
-</div>
 <script src="assets/main.js"></script>
 </body>
 </html>
